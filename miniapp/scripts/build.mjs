@@ -1,0 +1,11 @@
+import {readFile,writeFile,mkdir,copyFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+const page=await readFile('page.html','utf8');
+const schedule=await readFile('schedule.json','utf8');
+const server=await readFile('server.mjs','utf8');
+await mkdir('worker',{recursive:true});
+const version=createHash('sha256').update(schedule).digest('hex').slice(0,16);
+await writeFile('worker/index.js','const PAGE='+JSON.stringify(page)+';\nconst SCHEDULE='+schedule+';\nconst SCHEDULE_VERSION='+JSON.stringify(version)+';\n'+server);
+await mkdir('dist/server',{recursive:true});await mkdir('dist/.openai',{recursive:true});
+await copyFile('worker/index.js','dist/server/index.js');await copyFile('.openai/hosting.json','dist/.openai/hosting.json');
+console.log('Built College Mini App');

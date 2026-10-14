@@ -1,0 +1,13 @@
+.git
+.env
+.env.*
+**/.env
+**/service-account*.json
+**/data
+**/*.sqlite*
+**/__pycache__
+**/.venv
+**/node_modules
+**/dist
+miniapp
+docs

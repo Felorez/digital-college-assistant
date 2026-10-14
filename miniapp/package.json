@@ -1,0 +1,10 @@
+{
+  "name": "digital-college-miniapp",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/check.mjs && node scripts/check-loading.mjs",
+    "preview": "node scripts/preview.mjs"
+  }
+}
