@@ -2,8 +2,6 @@
 
 Telegram Mini App и голосовой помощник для студентов и преподавателей Digital College.
 
-**Работающее Mini App:** https://digital-college-telegram-74926.dewylion4.chatgpt.site
-
 **Бот:** https://t.me/AccountantBookkeeperBot — отображаемое имя «Digital College · Помощник».
 
 ## Возможности
